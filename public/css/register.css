@@ -1,0 +1,61 @@
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.entryText{
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.formTitles{
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.formulario{
+    padding: 20px;
+}
+
+
+.userProfileContainer{
+    display: flex;
+    justify-content: start;
+    margin: 0 10px 20px;
+    
+}
+
+.userProfileControl{
+    display: flex;
+    align-items: center;
+}
+
+
+.user{
+    padding: 0 30px;
+}
+
+.intereses{
+    text-align: start;
+    padding: 0 0 20px 15px;
+}
+
+.intereses label{
+    padding-left: 15px;
+}
+
+
+.userPhoto{
+    width: 100%;
+    margin: 10px 0px 30px;
+}
+
+#enviar{
+    text-decoration: none;
+    color: black;
+}
