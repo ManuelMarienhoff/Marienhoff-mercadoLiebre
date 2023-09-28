@@ -14,7 +14,13 @@ module.exports = {
         res.render("products/createProduct")
     },
     create: (req,res)=>{
-        const product = req.body
+        const product = {
+            name: req.body.name,
+            image: req.file? req.file.filename : "banner.jpg",
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
+        };
+        console.log(product)
         productService.create(product);
         res.redirect("products") /* en redirect va la url, no el archivo */
     }
