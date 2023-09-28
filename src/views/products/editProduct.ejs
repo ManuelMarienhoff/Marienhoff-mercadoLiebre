@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include("../partials/header") %>
+    <main>
+        <form method="post" action="/products/<%= product.id %>?_method=put" enctype="multipart/form-data">
+            <div>
+                <label for="name">Nombre del producto</label>
+                <input type="text" name="name" value="<%= product.name %>">
+            </div>
+            <div>
+                <label for="image">Selecciona una imagen</label>
+                <input type="file" name="image">
+            </div>
+            <div>
+                <label for="price">Precio</label>
+                <input type="number" name="price" value="<%= product.price %>">
+            </div>
+            <div>
+                <label for="discount">Descuento</label>
+                <input type="number" name="discount" value="<%= product.discount %>">
+            </div>
+            <input type="submit" name="edit">
+        </form>
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+</html>

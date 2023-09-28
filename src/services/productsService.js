@@ -9,5 +9,8 @@ module.exports = {
     },
     create: function(product){
         db.products.create(product);
+    },
+    edit: function(id,product,file){
+        db.products.edit(id,product,file);
     }
 }
