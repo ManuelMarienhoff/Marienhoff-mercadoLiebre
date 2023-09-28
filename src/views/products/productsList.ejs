@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include("../partials/header") %>
+    <main>
+        <div class="flexboxRaiz">
+            <% products.forEach((product)=>{ %>
+                <%- include("../partials/productCard", {product}) %>
+            <% }) %>
+        </div>
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+</html>
