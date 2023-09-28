@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "name": "Cafetera Moulinex",
+    "name": "Cafetera Moads",
     "image": "img-cafetera-moulinex.jpg",
     "price": 6770,
     "discount": 40
   },
   {
     "id": 2,
-    "name": "MacBook Pro 2019",
-    "image": "img-macbook-pro-2019.jpg",
+    "name": "sape",
+    "image": "image-1695931125120.jpg",
     "price": 230000,
     "discount": 20
   },

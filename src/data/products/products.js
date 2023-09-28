@@ -24,6 +24,33 @@ module.exports = {
         }
         products.push(newProduct);
         this.saveProducts(products);
+    },
+    edit: function(id,product,file){
+        const products = this.getAllProducts();
+        // const productToEdit = this.getProductById(id);    /* con esto no lo cambiaba xq no lo sacaba de products (el array de objetos)*/
+        const productToEdit = products.find((product) => product.id == id); /* solo asi cambia el producto en el JSON */
+        productToEdit.name = product.name;
+        productToEdit.price = Number(product.price);
+        productToEdit.discount = Number(product.discount);
+        if(file){
+            productToEdit.image = file.filename;
+
+            /* funcion para borrar imagen vieja */
+            let oldImage = this.getProductById(id).image
+            
+            function deleteImage(image) { 
+              fs.unlinkSync(
+                path.join(__dirname, "../../../public/img/products/" + image)
+              );
+            }
+            deleteImage(oldImage);
+
+        } else{
+            productToEdit.image = this.getProductById(id).image;
+            
+        }
+        this.saveProducts(products);
+        return product;
     }
     
 }

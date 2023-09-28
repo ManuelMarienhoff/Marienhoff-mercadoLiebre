@@ -22,14 +22,17 @@ const productsController = require("../controllers/productsController");
 router.get("/", productsController.list);
 
 /* Detail */
-router.get("/detail/:id", productsController.detail);
+router.get("/:id", productsController.detail);
 
 /* Create */
 router.get("/create", productsController.getCreate);
 
-router.post("",upload.single("image"), productsController.create)
+router.post("",upload.single("image"), productsController.create);
 
 /* Update */
+router.get("/edit/:id", productsController.getEdit);
+
+router.put("/:id", upload.single("image"), productsController.edit);
 
 /* Delete */
 

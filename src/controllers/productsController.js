@@ -23,5 +23,17 @@ module.exports = {
         console.log(product)
         productService.create(product);
         res.redirect("products") /* en redirect va la url, no el archivo */
+    },
+    getEdit: (req,res)=>{
+        const id = req.params.id
+        const product = productService.getProductById(id)
+        res.render("products/editProduct", {product})
+    },
+    edit: (req,res)=>{
+        const product = req.body;
+        const id = req.params.id;
+        const file = req.file
+        productService.edit(id,product,file);
+        res.redirect("/products")
     }
 }
