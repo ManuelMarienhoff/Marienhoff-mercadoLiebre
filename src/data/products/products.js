@@ -38,12 +38,8 @@ module.exports = {
             /* funcion para borrar imagen vieja */
             let oldImage = this.getProductById(id).image
             
-            function deleteImage(image) { 
-              fs.unlinkSync(
-                path.join(__dirname, "../../../public/img/products/" + image)
-              );
-            }
-            deleteImage(oldImage);
+            
+            this.deleteImage(oldImage);
 
         } else{
             productToEdit.image = this.getProductById(id).image;
@@ -51,6 +47,18 @@ module.exports = {
         }
         this.saveProducts(products);
         return product;
+    },
+    deleteImage: function(image){
+        fs.unlinkSync(
+          path.join(__dirname, "../../../public/img/products/" + image)
+        );
+    },
+    delete: function(id){
+        const products = this.getAllProducts();
+        let deletedProductImage = this.getProductById(id).image
+        this.deleteImage(deletedProductImage)
+        const remainingProducts = products.filter((product)=> product.id != id);
+        this.saveProducts(remainingProducts);
     }
     
 }

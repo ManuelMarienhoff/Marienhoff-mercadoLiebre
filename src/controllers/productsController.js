@@ -16,11 +16,10 @@ module.exports = {
     create: (req,res)=>{
         const product = {
             name: req.body.name,
-            image: req.file? req.file.filename : "banner.jpg",
+            image: req.file? req.file.filename : "default.png",
             price: Number(req.body.price),
             discount: Number(req.body.discount),
         };
-        console.log(product)
         productService.create(product);
         res.redirect("products") /* en redirect va la url, no el archivo */
     },
@@ -34,6 +33,11 @@ module.exports = {
         const id = req.params.id;
         const file = req.file
         productService.edit(id,product,file);
+        res.redirect("/products")
+    },
+    delete: (req,res)=>{
+        const id = req.params.id
+        productService.delete(id)
         res.redirect("/products")
     }
 }
