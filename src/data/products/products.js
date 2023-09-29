@@ -56,7 +56,10 @@ module.exports = {
     delete: function(id){
         const products = this.getAllProducts();
         let deletedProductImage = this.getProductById(id).image
-        this.deleteImage(deletedProductImage)
+        if(deletedProductImage !== "default.png"){ /* si la imagen vieja no es la default, borrarla */
+            this.deleteImage(deletedProductImage)
+        };
+        
         const remainingProducts = products.filter((product)=> product.id != id);
         this.saveProducts(remainingProducts);
     }
