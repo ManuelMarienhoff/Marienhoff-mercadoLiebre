@@ -22,7 +22,7 @@ const productsController = require("../controllers/productsController");
 router.get("/", productsController.list);
 
 /* Detail */
-router.get("/:id", productsController.detail);
+router.get("/detail/:id", productsController.detail); /* por que si ponia solo :id no me andaba la ruta create??????? */
 
 /* Create */
 router.get("/create", productsController.getCreate);
@@ -35,5 +35,6 @@ router.get("/edit/:id", productsController.getEdit);
 router.put("/:id", upload.single("image"), productsController.edit);
 
 /* Delete */
+router.delete("/eliminar/:id", productsController.delete)
 
 module.exports = router;

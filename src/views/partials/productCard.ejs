@@ -1,11 +1,13 @@
 <article class="articulo">
-                    <img src="/img/products/<%= product.image %>"> <!-- le pongo la ruta aca para que en el json solo este el nombre de la imagen -->
-                    <div class="caja-articulo">
-                        <i id="camion" class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">$<%= product.price %></p>
-                            <p class="descuentos"><%= product.discount %>% OFF</p>
+                    <a href="/products/detail/<%= product.id %>">
+                        <img src="/img/products/<%=product.image %>"> <!-- le pongo la ruta aca para que en el json solo este el nombre de la imagen -->
+                        <div class="caja-articulo">
+                            <i id="camion" class="fa-solid fa-truck"></i>
+                            <div class="flexbox">
+                                <p class="precios">$<%= product.price %></p>
+                                <p class="descuentos"><%= product.discount %>% OFF</p>
+                            </div>
+                            <p class="descripciones"><%= product.name %></p>
                         </div>
-                        <p class="descripciones"><%= product.name %></p>
-                    </div>
+                    </a>
                 </article>

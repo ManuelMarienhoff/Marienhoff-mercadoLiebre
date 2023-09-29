@@ -47,5 +47,19 @@
     "image": "img-macbook-pro-2019.jpg",
     "price": 230000,
     "discount": 20
+  },
+  {
+    "id": "31a3e0d3-bce7-4a4a-a13b-74bd73d6c0c0",
+    "name": "12312",
+    "image": "default.png",
+    "price": 123312,
+    "discount": 123312
+  },
+  {
+    "id": "eee0d43a-bbb2-47f4-97b3-a37b5a976cbe",
+    "name": "asasa",
+    "image": "default.png",
+    "price": 1212,
+    "discount": 1212
   }
 ]
