@@ -14,98 +14,19 @@
     <main>  
             <section class="flexboxRaiz">
                 <h2 class="titulares">Basado en tu última visita</h2>
-                <article class="articulo">
-                    <img src="/img/products/img-cafetera-moulinex.jpg">
-                    <div class="caja-articulo">
-                        <i id="camion" class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">$6.770</p>
-                            <p class="descuentos">40% OFF</p>
-                        </div>
-                        <p class="descripciones">Cafetera Moulinex</p>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/img/products/img-macbook-pro-2019.jpg">
-                    <div class="caja-articulo">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">230.000</p>
-                            <p class="descuentos">20% OFF</p>
-                        </div>
-                        <p class="descripciones">MacBook Pro 2019</p>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/img/products/img-samsung-galaxy-s10.jpg">
-                    <div class="caja-articulo">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">$70.500</p>
-                            <p class="descuentos">10% OFF</p>
-                        </div>
-                            <p class="descripciones">Samsung Galaxy S10</p>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/img/products/img-tv-samsung-smart.jpg">
-                    <div class="caja-articulo">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">$23.200</p>
-                            <p class="descuentos">5% OFF</p>
-                        </div>
-                        <p class="descripciones">SmartTv Samsung43"</p>
-                    </div>
-                </article>
-            </section>
+                <% products.forEach(product => { 
+                      if(product.lastViewed == true){ %>
+                        <%- include("./partials/productCard", {product}) %> <%
+                   }
+                 }) %>
 
             <section class="flexboxRaiz">
                 <h2 class="titulares">Ofertas</h2>
-                <article class="articulo">
-                    <img class= "cafetera" src="/img/products/img-cafetera-moulinex.jpg">
-                    <div class="caja-articulo">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">$6.770</p>
-                            <p class="descuentos">40% OFF</p>
-                        </div>
-                        <p class="descripciones">Cafetera Moulinex</p>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/img/products/img-macbook-pro-2019.jpg">
-                    <div class="caja-articulo">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">230.000</p>
-                            <p class="descuentos">20% OFF</p>
-                        </div>
-                        <p class="descripciones">MacBook Pro 2019</p>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/img/products/img-samsung-galaxy-s10.jpg">
-                    <div class="caja-articulo">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">$70.500</p>
-                            <p class="descuentos">10% OFF</p>
-                        </div>
-                        <p class="descripciones">Samsung Galaxy S10</p>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <img src="/img/products/img-tv-samsung-smart.jpg">
-                    <div class="caja-articulo">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="flexbox">
-                            <p class="precios">$23.200</p>
-                            <p class="descuentos">5% OFF</p>
-                        </div>
-                        <p class="descripciones">SmartTv Samsung43"</p>
-                    </div>
-                </article>
+                <% products.forEach(product => { 
+                      if(product.offer == true){ %>
+                        <%- include("./partials/productCard", {product}) %> <%
+                   }
+                 }) %>
             </section>
 
     </main>

@@ -4,48 +4,71 @@
     "name": "Cafetera Moads",
     "image": "img-cafetera-moulinex.jpg",
     "price": 6770,
-    "discount": 40
+    "discount": 40,
+    "offer": true,
+    "lastViewed": false
   },
   {
     "id": 2,
-    "name": "sape",
+    "name": "messi miami",
     "image": "image-1695931125120.jpg",
-    "price": 230000,
-    "discount": 20
+    "price": 30,
+    "discount": 10,
+    "offer": false,
+    "lastViewed": true
   },
   {
     "id": 3,
     "name": "Samsung Galaxy S10",
     "image": "img-samsung-galaxy-s10.jpg",
     "price": 70500,
-    "discount": 10
+    "discount": 10,
+    "offer": true,
+    "lastViewed": false
   },
   {
     "id": 4,
     "name": "SmartTv Samsung 43",
     "image": "img-tv-samsung-smart.jpg",
     "price": 2300,
-    "discount": 5
+    "discount": 5,
+    "offer": true,
+    "lastViewed": false
   },
   {
     "id": 5,
     "name": "MacBook Pro 2019",
     "image": "img-macbook-pro-2019.jpg",
     "price": 230000,
-    "discount": 20
+    "discount": 20,
+    "offer": true,
+    "lastViewed": false
   },
   {
-    "id": 6,
-    "name": "MacBook Pro 2019",
-    "image": "img-macbook-pro-2019.jpg",
-    "price": 230000,
-    "discount": 20
+    "id": "0d952c0f-128c-4791-bc31-6d961ace17fc",
+    "name": "messi barca",
+    "image": "image-1697742345354.jpg",
+    "price": 10,
+    "discount": 10,
+    "offer": false,
+    "lastViewed": true
   },
   {
-    "id": 7,
-    "name": "MacBook Pro 2019",
-    "image": "img-macbook-pro-2019.jpg",
-    "price": 230000,
-    "discount": 20
+    "id": "fae6f8ea-d678-402e-9c4a-f00bb1ee99a4",
+    "name": "messi arg",
+    "image": "image-1697742367202.jpg",
+    "price": 100,
+    "discount": 100,
+    "offer": false,
+    "lastViewed": true
+  },
+  {
+    "id": "ed65da11-b804-4e70-8399-7bc49c7905e8",
+    "name": "default",
+    "image": "image-1697742470027.png",
+    "price": 1,
+    "discount": 2,
+    "offer": false,
+    "lastViewed": true
   }
 ]

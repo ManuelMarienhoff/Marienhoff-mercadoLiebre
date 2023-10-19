@@ -22,7 +22,7 @@ const productsController = require("../controllers/productsController");
 router.get("/", productsController.list);
 
 /* Detail */
-router.get("/detail/:id", productsController.detail); /* por que si ponia solo :id no me andaba la ruta create??????? */
+router.get("/detail/:id", productsController.detail); /* ojo con poner get"/:id" xq es un comodin, cancelaria las rutas de abajo cumplan con eso */
 
 /* Create */
 router.get("/create", productsController.getCreate);
