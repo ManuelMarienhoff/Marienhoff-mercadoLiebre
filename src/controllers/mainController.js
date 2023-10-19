@@ -1,6 +1,9 @@
+const productService = require("../services/productsService")
+
 module.exports = {
     home: function(req,res){
-        res.render("home")
+        const products = productService.getAllProducts();
+        res.render("home", {products})
     }
 };
 

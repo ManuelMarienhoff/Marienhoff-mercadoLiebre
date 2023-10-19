@@ -12,6 +12,9 @@
         <form method="post" action="/products/eliminar/<%= product.id %>?_method=delete">
         <button type="submit">eliminar</button>
         </form>
+        <a href="/products/edit/<%= product.id %>">
+            <button>Editar</button>
+        </a>
     </main>
     <%- include("../partials/footer") %>
 </body>
