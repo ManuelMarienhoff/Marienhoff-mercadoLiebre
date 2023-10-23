@@ -1,0 +1,24 @@
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.entryText{
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.formTitles{
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+main img {
+    height: 200px;
+    width: 200px;
+}

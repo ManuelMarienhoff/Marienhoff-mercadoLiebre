@@ -6,7 +6,8 @@
     "price": 6770,
     "discount": 40,
     "offer": true,
-    "lastViewed": false
+    "lastViewed": false,
+    "category": 2
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 30,
     "discount": 10,
     "offer": false,
-    "lastViewed": true
+    "lastViewed": true,
+    "category": 1
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "price": 70500,
     "discount": 10,
     "offer": true,
-    "lastViewed": false
+    "lastViewed": false,
+    "category": 2
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "price": 2300,
     "discount": 5,
     "offer": true,
-    "lastViewed": false
+    "lastViewed": false,
+    "category": 2
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "price": 230000,
     "discount": 20,
     "offer": true,
-    "lastViewed": false
+    "lastViewed": false,
+    "category": 2
   },
   {
     "id": "0d952c0f-128c-4791-bc31-6d961ace17fc",
@@ -51,16 +56,18 @@
     "price": 10,
     "discount": 10,
     "offer": false,
-    "lastViewed": true
+    "lastViewed": true,
+    "category": 1
   },
   {
     "id": "fae6f8ea-d678-402e-9c4a-f00bb1ee99a4",
-    "name": "messi arg",
+    "name": "messi argentina",
     "image": "image-1697742367202.jpg",
     "price": 100,
     "discount": 100,
     "offer": false,
-    "lastViewed": true
+    "lastViewed": true,
+    "category": 1
   },
   {
     "id": "ed65da11-b804-4e70-8399-7bc49c7905e8",
@@ -69,6 +76,7 @@
     "price": 1,
     "discount": 2,
     "offer": false,
-    "lastViewed": true
+    "lastViewed": true,
+    "category": 1
   }
 ]

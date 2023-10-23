@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <%- include("../partials/head") %>
+    <link rel="stylesheet" href="/css/partials/productCard.css">
+    
     <title>Document</title>
 </head>
 <body>
     <%- include("../partials/header") %>
     <main>
-        <%- include("../partials/productCard", {product}) %>
+        <%- include("../partials/productCard") %>
+        
         <!-- agregar relacionados -->
         <form method="post" action="/products/eliminar/<%= product.id %>?_method=delete">
         <button type="submit">eliminar</button>

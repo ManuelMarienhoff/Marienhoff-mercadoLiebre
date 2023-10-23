@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
     <%- include("../partials/head") %>
+    <link rel="stylesheet" href="/css/products/editProduct.css">
     <title>Document</title>
 </head>
 <body>
     <%- include("../partials/header") %>
     <main>
+        <img src="/img/products/<%= product.image %>">
         <form method="post" action="/products/<%= product.id %>?_method=put" enctype="multipart/form-data">
             <div>
-                <label for="name">Nombre del producto</label>
-                <input type="text" name="name" value="<%= product.name %>">
+                <label for="name" class="formTitles">Nombre del producto</label>
+                <input type="text" name="name" value="<%= product.name %>" class="entryText">
             </div>
             <div>
-                <label for="image">Selecciona una imagen</label>
+                <label for="image" class="formTitles">Selecciona una imagen</label>
+                 
                 <input type="file" name="image">
             </div>
             <div>
-                <label for="price">Precio</label>
-                <input type="number" name="price" value="<%= product.price %>">
+                <label for="price" class="formTitles">Precio</label>
+                <input type="number" name="price" value="<%= product.price %>" class="entryText">
             </div>
             <div>
-                <label for="discount">Descuento</label>
-                <input type="number" name="discount" value="<%= product.discount %>">
+                <label for="discount" class="formTitles">Descuento</label>
+                <input type="number" name="discount" value="<%= product.discount %>" class="entryText">
             </div>
             <input type="submit" name="edit">
         </form>

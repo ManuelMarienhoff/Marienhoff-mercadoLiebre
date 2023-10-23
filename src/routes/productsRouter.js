@@ -1,19 +1,7 @@
 const { Router } = require("express");
 const router = Router();
-const path = require("path")
-const multer = require("multer")
+const upload = require("../middlewares/multerProducts")
 
-/* ********** Set Multer ******************* */
-const storage = multer.diskStorage({
-    destination: function(req,file,cb){
-        cb(null, "./public/img/products")
-    },
-    filename: function(req,file,cb){
-        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
-    }
-})
-
-const upload = multer({storage})
 
 /* ******* Products Routes *********** */
 const productsController = require("../controllers/productsController");

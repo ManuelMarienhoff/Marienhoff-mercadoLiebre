@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("./partials/head") %>
+    <%- include("../partials/head") %>
     <link href="/css/register.css" rel="stylesheet">
     
     <title>Mercado Liebre</title>
 <body>
-    <%- include("./partials/header") %>
+    <%- include("../partials/header") %>
 
     <main>
-        <form class="formulario">
+        <form class="formulario" action="/users/register" method="post" enctype="multipart/form-data">
             <div>
-                <input type="text" name="nameSurname" placeholder="Nombre y Apellido" class="entryText">
+                <label for="name" class="formTitles">Nombre</label>
+                <input type="text" name="name" placeholder="Nombre" class="entryText">
             </div>
             <div>
+                <label for="surname" class="formTitles">Apellido</label>
+                <input type="text" name="surname" placeholder="Apellido" class="entryText">
+            </div>
+            <div>
+                <label for="username" class="formTitles">Nombre de usuario</label>
                 <input type="text" name="username" placeholder="Nombre de usuario" class="entryText">
             </div>
             <div>
+                <label for="email" class="formTitles">Email</label>
                 <input type="email" name="email" placeholder="Correo electronico" class="entryText">
             </div>
             <div>
@@ -24,7 +31,8 @@
                 <input type="date" name="birthdate" class="entryText">
             </div>
             <div>
-                <input type="text" name="adress" placeholder="Domicilio" class="entryText">
+                <label for="address" class="formTitles">Domicilio</label>
+                <input type="text" name="address" placeholder="Domicilio" class="entryText">
             </div>
             <section>
                 <label class="formTitles">Perfil de usuario</label>
@@ -39,38 +47,13 @@
                     </article>
                 </div>
             </section>
-            <div>
-                <label class="formTitles">Intereses</label>
-                <section class="interesesContainer">
-                    <div class="intereses">
-                        <input type="checkbox" name="categories" value="electro" id="electro">
-                        <label for="electro">Electro</label>
-                    </div>
-                    <div class="intereses">
-                        <input type="checkbox" name="categories" value="moda" id="moda">
-                        <label for="moda">Moda</label>
-                    </div>
-                    <div class="intereses">
-                        <input type="checkbox" name="categories" value="hogar" id="hogar">
-                        <label for="hogar">Hogar</label>
-                    </div>
-                    <div class="intereses">
-                        <input type="checkbox" name="categories" value="jugueteria" id="jugueteria">
-                        <label for="jugueteria">Jugueteria</label>
-                    </div>
-                    <div class="intereses">
-                        <input type="checkbox" name="categories" value="vidaSana" id="vidaSana">
-                        <label for="vidaSana">Vida Sana</label>
-                    </div>
-                </section>
-            </div>
             <div class="profilePicture">
                 <label class="formTitles">Defina su foto de usuario</label>
                 <input type="file" name="userPhoto" class="userPhoto"> 
             </div>
             <div>
+                <label for="password" class="formTitles">Contraseña</label>
                 <input type="password" name="password" placeholder="Contraseña" class="entryText">
-                <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" class="entryText">
             </div>
             <div>
                 <button type="reset">Borrar</button>
@@ -80,7 +63,7 @@
         </form>
     </main>
 
-    <%- include("./partials/footer") %>
+    <%- include("../partials/footer") %>
 
 </body>
 </html>

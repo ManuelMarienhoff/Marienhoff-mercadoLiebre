@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <%- include("../partials/head") %>
+    <link rel="stylesheet" href="/css/products/createProduct.css">
     <title>Document</title>
 </head>
 <body>
@@ -9,20 +10,24 @@
     <main>
         <form method="post" action="/products" enctype="multipart/form-data">
             <div>
-                <label for="name">Nombre del producto</label>
-                <input type="text" name="name">
+                <label for="name" class="formTitles">Nombre del producto</label>
+                <input type="text" name="name" class="entryText">
             </div>
             <div>
-                <label for="image">Selecciona una imagen</label>
+                <label for="category" class="formTitles">Categoria</label>
+                <input type="text" name="category" class="entryText">
+            </div>
+            <div>
+                <label for="image" class="formTitles">Selecciona una imagen</label>
                 <input type="file" name="image">
             </div>
             <div>
-                <label for="price">Precio</label>
-                <input type="number" name="price">
+                <label for="price" class="formTitles">Precio</label>
+                <input type="number" name="price" class="entryText">
             </div>
             <div>
-                <label for="discount">Descuento</label>
-                <input type="number" name="discount">
+                <label for="discount" class="formTitles">Descuento</label>
+                <input type="number" name="discount" class="entryText">
             </div>
             <input type="submit" name="create">
         </form>

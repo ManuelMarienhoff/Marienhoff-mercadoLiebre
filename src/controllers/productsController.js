@@ -19,6 +19,7 @@ module.exports = {
             image: req.file? req.file.filename : "default.png",
             price: Number(req.body.price),
             discount: Number(req.body.discount),
+            category: req.body.category
         };
         productService.create(product);
         res.redirect("products") /* en redirect va la url, no el archivo */
