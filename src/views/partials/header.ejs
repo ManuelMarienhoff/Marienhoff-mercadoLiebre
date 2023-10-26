@@ -23,8 +23,11 @@
                 <li><a href="#">Ayuda</a></li>
             </ul>
             <ul class="right-navbar" type="none">
+                <% if(!locals.isLogged){ %>
                 <li><a href="/users/register">Creá tu cuenta</a><i class="fa-solid fa-id-card"></i></li>
                 <li><a href="/users/login">Ingresá</a><i class="fa-solid fa-right-to-bracket"></i></li>
+                    <% } %>
+                
                 <li><a href="#">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
             </ul>
         </nav>

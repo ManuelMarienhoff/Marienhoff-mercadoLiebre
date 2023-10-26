@@ -9,7 +9,7 @@
     <%- include("../partials/header") %>
 
     <main>
-        <form class="formulario" action="/users/register" method="post" enctype="multipart/form-data">
+        <form class="formulario" action="/users/createUser" method="post" enctype="multipart/form-data">
             <div>
                 <label for="name" class="formTitles">Nombre</label>
                 <input type="text" name="name" placeholder="Nombre" class="entryText">
@@ -57,7 +57,7 @@
             </div>
             <div>
                 <button type="reset">Borrar</button>
-                <button type="submit"><a id="enviar" href="/">Enviar</a></button>
+                <button type="submit">Enviar</button>
             </div>
 
         </form>

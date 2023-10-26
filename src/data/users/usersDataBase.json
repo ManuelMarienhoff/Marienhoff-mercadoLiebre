@@ -1,6 +1,6 @@
 [
   {
-    "id": "ab00bd2c-bcfa-4a40-93d9-55aedb6dfe4d",
+    "id": 1,
     "name": "adsdas",
     "surname": "ddas",
     "username": "dsaads",
@@ -10,5 +10,16 @@
     "userProfile": "seller",
     "image": "default.png",
     "password": "dsada"
+  },
+  {
+    "name": "caca",
+    "surname": "",
+    "username": "",
+    "email": "azucar@gmail.com",
+    "birthdate": "",
+    "address": "",
+    "password": "$2a$10$FPCBuWnm.co8/Q3nc/ltsuESMNwB5KY1Gkm76oO19dAS0yaYJaopu",
+    "image": "default.png",
+    "id": 2
   }
 ]
