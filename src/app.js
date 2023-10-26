@@ -27,10 +27,18 @@ app.use(cookieParser())
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 app.use(userLoggedMiddleware) /* tiene que ir despues de session y cookies*/
 
+
 /* **************** Routes **************************/
 const mainRouter = require("./routes/mainRouter")
 
 app.use("/", mainRouter);
+
+
+/* *************** 404 not found **************** */
+const error404 = require("./middlewares/error404");
+app.use(error404);
+
+
 
 /* *************** Server ******************** */
 const PORT = process.env.PORT || 3001; 
