@@ -12,27 +12,45 @@
         <form class="formulario" action="/users/createUser" method="post" enctype="multipart/form-data">
             <div>
                 <label for="name" class="formTitles">Nombre</label>
-                <input type="text" name="name" placeholder="Nombre" class="entryText">
+                <input type="text" name="name" class="entryText"  value="<%= locals.oldData && oldData.name %>">
+                <% if (locals.errors && errors.name) { %>
+                    <p><%= errors.name.msg %></p>
+                <% } %>
             </div>
             <div>
                 <label for="surname" class="formTitles">Apellido</label>
-                <input type="text" name="surname" placeholder="Apellido" class="entryText">
+                <input type="text" name="surname" class="entryText" value="<%= locals.oldData && oldData.surname %>">
+                <% if (locals.errors && errors.surname) { %>
+                    <p><%= errors.surname.msg %></p>
+                <% } %>
             </div>
             <div>
                 <label for="username" class="formTitles">Nombre de usuario</label>
-                <input type="text" name="username" placeholder="Nombre de usuario" class="entryText">
+                <input type="text" name="username" class="entryText" value="<%= locals.oldData && oldData.username %>">
+                <% if (locals.errors && errors.username) { %>
+                    <p><%= errors.username.msg %></p>
+                <% } %>
             </div>
             <div>
                 <label for="email" class="formTitles">Email</label>
-                <input type="email" name="email" placeholder="Correo electronico" class="entryText">
+                <input type="email" name="email" class="entryText" value="<%= locals.oldData && oldData.email %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p><%= errors.email.msg %></p>
+                <% } %>
             </div>
             <div>
                 <label class="formTitles">Fecha de nacimiento</label>
                 <input type="date" name="birthdate" class="entryText">
+                <% if (locals.errors && errors.birthdate) { %>
+                    <p><%= errors.birthdate.msg %></p>
+                <% } %>
             </div>
             <div>
                 <label for="address" class="formTitles">Domicilio</label>
-                <input type="text" name="address" placeholder="Domicilio" class="entryText">
+                <input type="text" name="address" class="entryText" value="<%= locals.oldData && oldData.address %>">
+                <% if (locals.errors && errors.address) { %>
+                    <p><%= errors.address.msg %></p>
+                <% } %>
             </div>
             <section>
                 <label class="formTitles">Perfil de usuario</label>
@@ -53,7 +71,7 @@
             </div>
             <div>
                 <label for="password" class="formTitles">Contraseña</label>
-                <input type="password" name="password" placeholder="Contraseña" class="entryText">
+                <input type="password" name="password"  class="entryText" value="<%= locals.oldData && oldData.password %>">
             </div>
             <div>
                 <button type="reset">Borrar</button>
