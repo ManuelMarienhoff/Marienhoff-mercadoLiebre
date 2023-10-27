@@ -1,4 +1,4 @@
-const userServices = require("../services/usersService");
+const userService = require("../services/usersService");
 const bcrypt = require("bcryptjs");
 
 
@@ -7,25 +7,9 @@ module.exports = {
         res.render("users/login");
     },
     login: (req,res)=>{
-        const userToLogin = userServices.findByField("email", req.body.email)
-            if(userToLogin){
-            let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password) 
-            if(isOkPassword){
-                delete userToLogin.password; /* borro la contraseña para que no quede en session */
-                req.session.userLogged = userToLogin; /* guardo el usuario en session */
-
-                if(req.body.rememberUser){
-                    res.cookie("userEmail", req.body.email, {maxAge: 1000*5})
-                }
-
-                 res.redirect("perfil")
-
-            } else{return res.send("las credenciales son invalidas")}
-
-        } else{res.send("no existe ese email en nuestra db")}
-
-
-        
+        console.log(req.body)
+        userService.login(req,res)
+        res.redirect("perfil")        
     },
     getRegister: (req,res)=>{
         res.render("users/register");
@@ -41,7 +25,7 @@ module.exports = {
           image: req.file ? req.file.filename : "default.png",
           password: bcrypt.hashSync(req.body.password, 10)
         };
-        userServices.createUser(user);
+        userService.createUser(user);
         res.redirect("login")
     },
 
