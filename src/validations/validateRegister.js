@@ -33,7 +33,14 @@ module.exports= [
     .notEmpty().withMessage("Debes completar este campo").bail(),
 
     body("userPhoto"),
+    
     body("password")
+    .notEmpty().withMessage("Debes completar este campo").bail(),
+
+    body("confirmPassword")
     .notEmpty().withMessage("Debes completar este campo").bail()
+    .custom((value, {req} )=>{
+        return value === req.body.password
+    }).withMessage("Las contraseñas deben coincidir")
 
 ]

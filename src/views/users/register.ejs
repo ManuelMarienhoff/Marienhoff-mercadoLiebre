@@ -63,6 +63,9 @@
                         <input  type="radio" name="userProfile" value="seller" id="seller">
                         <label class="user" for="seller">Vendedor</label>
                     </article>
+                    <% if(locals.errors && errors.userProfile) {%>
+                    <p><%= errors.userProfile.msg %></p>
+                <% } %>
                 </div>
             </section>
             <div class="profilePicture">
@@ -72,6 +75,16 @@
             <div>
                 <label for="password" class="formTitles">Contraseña</label>
                 <input type="password" name="password"  class="entryText" value="<%= locals.oldData && oldData.password %>">
+                <% if(locals.errors && errors.password) {%>
+                    <p><%= errors.password.msg %></p>
+                <% } %>
+            </div>
+            <div>
+                <label for="confirmPassword" class="formTitles">Confirmar contraseña</label>
+                <input type="password" name="confirmPassword"  class="entryText" value="<%= locals.oldData && oldData.confirmPassword %>">
+                <% if(locals.errors && errors.confirmPassword) {%>
+                    <p><%= errors.confirmPassword.msg %></p>
+                <% } %>
             </div>
             <div>
                 <button type="reset">Borrar</button>

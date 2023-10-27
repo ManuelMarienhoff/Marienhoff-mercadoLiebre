@@ -18,7 +18,7 @@ module.exports = {
                     res.cookie("userEmail", req.body.email, {maxAge: 1000*5})
                 }
 
-                return res.redirect("perfil")
+                 res.redirect("perfil")
 
             } else{return res.send("las credenciales son invalidas")}
 

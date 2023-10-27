@@ -11,10 +11,12 @@ const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 const registerValidator = require("../validations/validateRegister")
 const registerMiddleware = require("../middlewares/registerMiddleware")
+const loginValidator = require("../validations/validateLogin")
+const loginMiddleware = require("../middlewares/loginMiddleware")
 
 /* Login */
 router.get("/login", guestMiddleware, usersController.getLogin);
-router.post("/login", usersController.login)
+router.post("/login",loginValidator,loginMiddleware, usersController.login)
 
 /* Register */
 router.get("/register", guestMiddleware, usersController.getRegister);

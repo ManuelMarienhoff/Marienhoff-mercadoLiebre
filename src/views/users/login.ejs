@@ -13,11 +13,15 @@
     <main>
         <form method="post" action="/users/login">
             <div>
-                <input type="email" name="email" placeholder="Correo electronico" class="entryText">
+                <input type="email" name="email" class="entryText">
+                
             </div>
             <div>
-                <input type="text" name="password" placeholder="Elegí tu contraseña" class="entryText">
+                <input type="password" name="password" class="entryText">
             </div>
+            <% if (locals.errors && errors.email) { %>
+                    <p><%= errors.email.msg %></p>
+                <% } %>
             <div>
                 <input type="checkbox" name="rememberUser">Recordarme</input>
             </div>
