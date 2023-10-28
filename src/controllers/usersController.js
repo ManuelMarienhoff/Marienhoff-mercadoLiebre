@@ -7,7 +7,6 @@ module.exports = {
         res.render("users/login");
     },
     login: (req,res)=>{
-        console.log(req.body)
         userService.login(req,res)
         res.redirect("perfil")        
     },
@@ -20,6 +19,7 @@ module.exports = {
         })
     },
     create: (req,res)=>{
+        delete req.body.confirmPassword
         const user = {
           ...req.body,
           image: req.file ? req.file.filename : "default.png",

@@ -21,7 +21,7 @@ const userServices = {
          req.session.userLogged = userToLogin; /* guardo el usuario en session */
 
          if (req.body.rememberUser) {
-           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 10 });
+           res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 5 }); /* 5 minutos */
          }
 
        } 
