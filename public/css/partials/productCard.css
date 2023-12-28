@@ -25,6 +25,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #666;
+    display: none;
 }
 
 .caja-articulo{
@@ -68,10 +69,10 @@
     position: absolute;
     right: 20px;
     top: -25px;
-    transition: transform 400ms;
+    transition: transform 300ms;
 }
 
-.fa-truck:hover{
+.articulo:hover .fa-truck{
     transform: rotate(-90deg);
 }
 
@@ -86,6 +87,7 @@
 }
 
 @media(min-width:520px){
+
 
 .articulo:hover .descripciones{
         display:block;
