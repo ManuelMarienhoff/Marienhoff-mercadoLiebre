@@ -39,7 +39,6 @@ const error404 = require("./middlewares/error404");
 app.use(error404);
 
 
-
 /* *************** Server ******************** */
 const PORT = process.env.PORT || 3001; 
 app.listen(PORT, ()=>console.log(`Se creo el servidor ${PORT}`));

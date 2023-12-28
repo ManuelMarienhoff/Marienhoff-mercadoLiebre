@@ -1,5 +1,4 @@
-const userService = require("../services/usersService");
-const bcrypt = require("bcryptjs");
+const usersService = require("../services/usersService");
 
 
 module.exports = {
@@ -7,31 +6,29 @@ module.exports = {
         res.render("users/login");
     },
     login: (req,res)=>{
-        userService.login(req,res)
-        res.redirect("perfil")        
+        usersService.login(req,res)
+        console.log(req.session.userLogged)
+        res.redirect("/")        
     },
     getRegister: (req,res)=>{
         res.render("users/register");
     },
     profile: (req,res)=>{
-        res.render("users/profile", {
-            user: req.session.userLogged
-        })
+        res.render("users/profile", {user: req.session.userLogged})
     },
     create: (req,res)=>{
         delete req.body.confirmPassword
-        const user = {
-          ...req.body,
-          image: req.file ? req.file.filename : "default.png",
-          password: bcrypt.hashSync(req.body.password, 10)
-        };
-        userService.createUser(user);
+        usersService.create(req.body, req.file);
         res.redirect("login")
+    },
+    delete:(req,res)=>{
+        usersService.delete(id)
+        res.redirect("/")
     },
 
     logout: (req,res)=>{
-        res.clearCookie("userEmail")
-        req.session.destroy();
+        // res.clearCookie("userEmail")
+        // req.session.destroy();
         return res.redirect("/")
     }
 }

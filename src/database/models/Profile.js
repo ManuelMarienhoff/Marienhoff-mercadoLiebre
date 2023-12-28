@@ -1,8 +1,11 @@
 module.exports = (sequelize,dataTypes)=>{
     const alias = "Profile";
     const cols = {
-        id: dataTypes.INTEGER,
-        name: dataTypes.STRING(100)
+      id: {
+        type: dataTypes.INTEGER,
+        primaryKey: true,
+      },
+      name: dataTypes.STRING(100),
     };
     const config = {
         tableName: "Profiles",

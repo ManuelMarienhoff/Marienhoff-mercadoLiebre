@@ -29,6 +29,8 @@ router.get("/perfil", authMiddleware, usersController.profile);
 // Logout
 router.get('/logout', usersController.logout)
 
+// Delete
+router.delete("/delete/:id", usersController.delete);
 
 
 

@@ -1,7 +1,10 @@
 module.exports = (sequelize, dataTypes)=>{
     const alias = "Address";
     const cols = {
-        id: dataTypes.INTEGER,
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true
+        },
         pais: dataTypes.STRING(100),
         provincia: dataTypes.STRING(100),
         localidad: dataTypes.STRING(100),

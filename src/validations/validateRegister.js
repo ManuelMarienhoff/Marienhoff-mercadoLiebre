@@ -15,7 +15,7 @@ module.exports= [
     .notEmpty().withMessage("Debes completar este campo").bail()
     .isEmail().withMessage("Debes ingresar un email valido").bail()
     .custom(async value => {
-        const user = await userService.findByField("email", value);
+        const user = await userService.findByEmail(value);
         if (user){
             throw new Error("Este email ya se encuentra en uso")
         }

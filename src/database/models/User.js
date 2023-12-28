@@ -1,14 +1,17 @@
 module.exports = (sequelize, dataTypes)=>{
     const alias = "User";
     const cols = {
-            id: dataTypes.INTEGER,
-            name: dataTypes.STRING(100),
-            surname: dataTypes.STRING(100),
-            username: dataTypes.STRING(100),
-            email: dataTypes.STRING(100),
-            password: dataTypes.STRING(100),
-            profile_id: dataTypes.INTEGER,
-            image: dataTypes.STRING(100)
+      id: {
+        type: dataTypes.INTEGER,
+        primaryKey: true,
+      },
+      name: dataTypes.STRING(100),
+      surname: dataTypes.STRING(100),
+      username: dataTypes.STRING(100),
+      email: dataTypes.STRING(100),
+      password: dataTypes.STRING(100),
+      profile_id: dataTypes.INTEGER,
+      image: dataTypes.STRING(100),
     };
     const config = {
         tableName: "Users",

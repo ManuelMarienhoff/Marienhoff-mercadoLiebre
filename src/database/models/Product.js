@@ -1,12 +1,15 @@
 module.exports = (sequelize, dataTypes)=>{
     const alias = "Product";
     const cols = {
-        id: dataTypes.INTEGER,
-        name: dataTypes.STRING(100),
-        price: dataTypes.DECIMAL(10,2),
-        discount: dataTypes.INTEGER,
-        image: dataTypes.STRING(100),
-        category_id: dataTypes.INTEGER
+      id: {
+        type: dataTypes.INTEGER,
+        primaryKey: true,
+      },
+      name: dataTypes.STRING(100),
+      price: dataTypes.DECIMAL(10, 2),
+      discount: dataTypes.INTEGER,
+      image: dataTypes.STRING(100),
+      category_id: dataTypes.INTEGER,
     };
     const config= {
         tableName: "Products",

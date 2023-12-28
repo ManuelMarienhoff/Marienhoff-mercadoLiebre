@@ -9,11 +9,12 @@
     Este es  tu perfil de usuario
     <div>
         <p>tu nombre de usuario es</p>
-        <%= user.name %>
+        <div>
+            <%= locals.userLogged.name %>
+        </div>
     </div>
     <div>
         <p>tu mail es</p>
-        <%= userLogged.email %>
     </div>
     
 </body>
